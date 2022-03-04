@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     # when connecting via social media
     'django.contrib.sites',
     'allauth',
-     # Basic log in/out stuff, registeration, password resets etc
+    # Basic log in/out stuff, registeration, password resets etc
     'allauth.account',
     # Used for log in using a social media provider, FB etc.
     'allauth.socialaccount',
