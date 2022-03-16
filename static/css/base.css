@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Lato:ital,wght@0,700;0,900;1,300;1,400;1,700&display=swap');
+
+/* Utility Classes */
+.logo-font {
+    font-family: 'Audiowide', cursive;
+    color: #054A91;
+}
+
+.blue {
+    color: #054A91;
+}
+
+.teal {
+    color: #51A3A3;
+}
+
+/* Search Bar */
+.search-bar {
+    width: 65%;
+    border: 2px solid #51A3A3;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+}
+
+/* Remove outline from search bar when on focus.
+Code from: https://www.codegrepper.com/code-examples/html/bootstrap+remove+blue+outline+input */
+.search-bar:focus {
+    outline: none;
+}
+
+.search-btn {
+    border: 2px solid #51A3A3;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+}
+
+.search-btn:hover {
+    background-color: #D6D6D6;
+}
+
+/* Main Header Icons */
+.fa-user,
+.fa-shopping-bag {
+    color: #054A91;
+}
