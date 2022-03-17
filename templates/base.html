@@ -116,6 +116,15 @@
                 </ul>
             </div>
         </div>
+        <!-- Including HTML from templates/includes files -->
+        <div class="row bg-white">
+            <nav class="col navbar navbar-expand-lg w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="fas fa-bars blue"></i>
+                </button>
+                {% include 'includes/main-nav.html' %}
+              </nav>
+        </div>
         <!-- Free Shipping Banner -->
         <div id="delivery-banner" class="row text-center">
             <div class="col">
