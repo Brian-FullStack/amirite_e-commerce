@@ -8,6 +8,11 @@ class Category(models.Model):
     '''
     Return the name and optional friendly name
     '''
+
+    class Meta:
+        ''' Specify the spelling in the admin '''
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
