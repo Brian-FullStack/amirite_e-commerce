@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Lato:ital,wght@0,700;0,900;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Lato:ital,wght@0,700;0,900;1,300;1,400;1,700&family=Manrope:wght@300;400;500;600&display=swap');
 
 /* Utility Classes */
 .logo-font {
     font-family: 'Audiowide', cursive;
     color: #054A91;
+}
+
+.copy-font {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+}
+
+.copy-font-bold {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
 }
 
 .blue {
@@ -12,6 +23,18 @@
 
 .teal {
     color: #51A3A3;
+}
+
+.white {
+    color: #fffeff;
+}
+
+.grey {
+    color: #d6d6d6;
+}
+
+body {
+    margin-top: 170px;
 }
 
 /* Search Bar */
@@ -38,8 +61,30 @@ Code from: https://www.codegrepper.com/code-examples/html/bootstrap+remove+blue+
     background-color: #D6D6D6;
 }
 
-/* Main Header Icons */
-.fa-user,
-.fa-shopping-bag {
-    color: #054A91;
+/* Hero Section */
+.hero-container {
+    background: url('/media/color-laptop.jpg') no-repeat center;
+    background-size: cover;
+    height: 500px;
+    margin-top: 170px;
+    width: 100%;
+    padding: 20px;
+}
+
+.hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.shop-now-btn {
+    border: 3px solid #054A91;
+    border-radius: 10px;
+}
+
+.site-btn {
+    color: #51A3A3;
+    padding: 5px 8px;
+    border: 3px solid #054A91;
+    border-radius: 10px;
 }

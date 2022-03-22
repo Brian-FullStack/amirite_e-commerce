@@ -1,17 +1,17 @@
 [
-    {
-       "pk":1,
-       "model":"products.product",
-       "fields":{
-          "sku":"pp5001340155",
-          "name":"ThinkPad X1 Yoga Gen 6 (14 Intel)",
-          "description":"Meet the 6th generation of the ThinkPad X1 Yoga, a 14inch 2-in-1 laptop that's been reimagined to enhance your experience. You'll still find the details you've enjoyed on our premium X1 Yoga, and you'll discover an impressive 16:10 display, a wider TouchPad, a larger battery for more time unplugged, and a new Storm Gray colour with tone-matched keyboard. Plus, with the Intel® Evo® platform, you get a super-responsive device that's ready whenever you need it.",
-          "price":2199.99,
-          "category":3,
-          "rating":4.6,
-          "image_url":"https://www.lenovo.com/medias/?context=bWFzdGVyfHJvb3R8MTA5MjczfGltYWdlL3BuZ3xoYzMvaGFhLzExMzM1OTk5MjkxNDIyLnBuZ3w3ZmM3N2IxMjQxYjA2OTA4NzBiNDVlY2FiMDJiNzAxNzI0NjIzZWZiNGE3NzAwZDllOTFiMjBlNTcwNTFlN2U2",
-          "image":"lenovo-thinkpad.webp"
-       }
-    }
+   {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5001340155",
+         "name": "ThinkPad X1 Yoga Gen 6 (14 Intel)",
+         "description": "Meet the 6th generation of the ThinkPad X1 Yoga, a 14inch 2-in-1 laptop that's been reimagined to enhance your experience. You'll still find the details you've enjoyed on our premium X1 Yoga, and you'll discover an impressive 16:10 display, a wider TouchPad, a larger battery for more time unplugged, and a new Storm Gray colour with tone-matched keyboard. Plus, with the Intel® Evo® platform, you get a super-responsive device that's ready whenever you need it.",
+         "price": 2199.99,
+         "category": 3,
+         "rating": 4.6,
+         "image_url": "https://www.lenovo.com/medias/?context=bWFzdGVyfHJvb3R8MTA5MjczfGltYWdlL3BuZ3xoYzMvaGFhLzExMzM1OTk5MjkxNDIyLnBuZ3w3ZmM3N2IxMjQxYjA2OTA4NzBiNDVlY2FiMDJiNzAxNzI0NjIzZWZiNGE3NzAwZDllOTFiMjBlNTcwNTFlN2U2",
+         "image": "lenovo-thinkpad.webp"
+      }
+   }
 
 ]

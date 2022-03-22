@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="logo-font">Products</h2>
+            <hr>
+        </div>
+    </div>
+    <!-- Products -->
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            {% for product in products %}
+                <div class="card py-2 px-2" style="width: 18rem;">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <hr>
+                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">€{{ product.price }}</li>
+                        {% if product.rating %}
+                            <li class="list-group-item">{{ product.rating }} <i class="fas fa-star"></i></li>
+                        {% else %}
+                            <li class="list-group-item">No rating exists</li>
+                        {% endif %}
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link site-btn">Add <i class="fas fa-shopping-bag fa-lg"></i></a>
+                        <a href="#" class="card-link site-btn">Learn More</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
