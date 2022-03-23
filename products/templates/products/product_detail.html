@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="product-image">
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                </a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-details">
+                <h5 class="prduct-title"><strong>{{ product.name }}</strong></h5>
+                <hr>
+                <div class="card-body">
+                    <p class="product-description">{{ product.description }}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">€{{ product.price }}</li>
+                    {% if product.rating %}
+                    <li class="list-group-item">{{ product.rating }} <i class="fas fa-star"></i></li>
+                    {% else %}
+                    <li class="list-group-item">No rating exists</li>
+                    {% endif %}
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link site-btn">Add <i class="fas fa-shopping-bag fa-lg"></i></a>
+                    <a href="#" class="card-link site-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

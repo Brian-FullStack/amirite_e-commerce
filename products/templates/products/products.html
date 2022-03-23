@@ -24,7 +24,9 @@
                 <div class="card py-2 px-2" style="width: 18rem;">
                     <h5 class="card-title">{{ product.name }}</h5>
                     <hr>
-                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                    </a>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">€{{ product.price }}</li>
                         {% if product.rating %}
@@ -35,7 +37,7 @@
                     </ul>
                     <div class="card-body">
                         <a href="#" class="card-link site-btn">Add <i class="fas fa-shopping-bag fa-lg"></i></a>
-                        <a href="#" class="card-link site-btn">Learn More</a>
+                        <a href="{% url 'product_detail' product.id %}" class="card-link site-btn">Learn More</a>
                     </div>
                 </div>
             {% endfor %}
