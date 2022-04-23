@@ -19,9 +19,9 @@
                     Phones
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Android</a>
-                    <a class="dropdown-item" href="#">IPhone</a>
-                    <a class="dropdown-item" href="#">All Phones</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=android">Android</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=iphone">IPhone</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=android, iphone">All Phones</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -30,10 +30,10 @@
                     Computers
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Laptops</a>
-                    <a class="dropdown-item" href="#">Desktops</a>
-                    <a class="dropdown-item" href="#">2-N-1 Laptops</a>
-                    <a class="dropdown-item" href="#">All Computers</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=laptops">Laptops</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=desktops">Desktops</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=2_n_1_laptops">2-N-1 Laptops</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=laptops, desktops, 2_n_1_laptops">All Computers</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -42,10 +42,10 @@
                     Accessories
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Headphones</a>
-                    <a class="dropdown-item" href="#">Keyboards</a>
-                    <a class="dropdown-item" href="#">Cases</a>
-                    <a class="dropdown-item" href="#">All Accessories</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=headphones">Headphones</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=keyboards">Keyboards</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=cases">Cases</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=headphones, keyboards, cases">All Accessories</a>
                 </div>
             </li>
 
