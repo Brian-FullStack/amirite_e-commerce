@@ -12,6 +12,34 @@
          "image_url": "https://www.lenovo.com/medias/?context=bWFzdGVyfHJvb3R8MTA5MjczfGltYWdlL3BuZ3xoYzMvaGFhLzExMzM1OTk5MjkxNDIyLnBuZ3w3ZmM3N2IxMjQxYjA2OTA4NzBiNDVlY2FiMDJiNzAxNzI0NjIzZWZiNGE3NzAwZDllOTFiMjBlNTcwNTFlN2U2",
          "image": "lenovo-thinkpad.webp"
       }
+   },
+   {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5004982265",
+         "name": "Beats Solo Pro On-Ear Wireless Noise Cancelling Headphones | Red",
+         "description": "Cancel noise, stay inspired is Featuring Active Noise Cancelling, which gives you the space to create with fully immersive sound.",
+         "price": 269,
+         "category": 6,
+         "rating": 4.8,
+         "image_url": "https://www.harveynorman.ie/tvs-headphones/headphones/all-headphones/noise-cancelling-headphones/beats-solo-pro-on-ear-wireless-noise-cancelling-headphones-red.html#gallery-1",
+         "image": "beats-solo-pro-red.avif"
+      }
+   },
+   {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5237462265",
+         "name": "Samsung Trio 500 Bluetooth Keyboard | Black",
+         "description": "Connect it up with three different devices at once. Enjoy wide compatibility and easy pairing, as a click is all you need to switch between smartphones, tablets and other devices paired with the Samsung Smart Keyboard Trio 500. Always be ready to achieve. Compact, slim and tastefully designed yet packed with special functions for a boosted performance, the wirelessly connectable Samsung Smart Keyboard Trio 500 delivers a comfortable typing experience wherever you are.",
+         "price": 44.90,
+         "category": 7,
+         "rating": 4.5,
+         "image_url": "https://www.harveynorman.ie/computing/computer-accessories/keyboards-mice/samsung-trio-500-bluetooth-keyboard-black.html#gallery-1",
+         "image": "Samsung-Trio-500-Black.avif"
+      }
    }
 
 ]
