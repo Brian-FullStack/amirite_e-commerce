@@ -7,9 +7,9 @@
                     Shop
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">By Price</a>
-                    <a class="dropdown-item" href="#">Category</a>
-                    <a class="dropdown-item" href="#">Rating</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">Category</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">Rating</a>
                     <a class="dropdown-item" href="#">All Items</a>
                 </div>
             </li>
