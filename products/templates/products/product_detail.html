@@ -28,10 +28,17 @@
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">€{{ product.price }}</li>
+                    {% if product.category %}
+                        <li class="list-group-item">
+                            <a href="{% url 'products' %}?category={{product.category.name}}" class="text-muted">
+                                {{ product.category.friendly_name }}
+                            </a>
+                        </li>
+                    {% endif %}
                     {% if product.rating %}
-                    <li class="list-group-item">{{ product.rating }} <i class="fas fa-star"></i></li>
+                        <li class="list-group-item">{{ product.rating }} <i class="fas fa-star"></i></li>
                     {% else %}
-                    <li class="list-group-item">No rating exists</li>
+                        <li class="list-group-item">No rating exists</li>
                     {% endif %}
                 </ul>
                 <div class="card-body">
