@@ -82,8 +82,13 @@ Code from: https://www.codegrepper.com/code-examples/html/bootstrap+remove+blue+
 }
 
 .site-btn {
-    color: #51A3A3;
+    color: #054A91;
     padding: 5px 8px;
     border: 3px solid #054A91;
     border-radius: 10px;
+}
+
+.site-btn:hover {
+    color: #fffeff;
+    background-color: #054A91;
 }
