@@ -98,3 +98,28 @@ Code from: https://www.codegrepper.com/code-examples/html/bootstrap+remove+blue+
     border: 2px solid #51A3A3;
     border-radius: 10px;
 }
+
+.btt-button {
+    height: 45px;
+    width: 45px;
+    background-color: #51A3A3;
+    border: 2px solid #51A3A3;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+.btt-button:hover {
+    background-color: #fffeff;
+}
+
+.btt-link {
+    cursor: pointer;
+    color: #fffeff;
+}
+
+.btt-link:hover {
+    color: #51A3A3;
+    text-decoration: none;
+}
