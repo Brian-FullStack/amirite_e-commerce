@@ -87,3 +87,36 @@
     </div>
 </div>
 {% endblock %}
+
+{% block postloadjs %}
+    {{ block.super}}
+    <script type="text/javascript">
+        /* 
+        1. Get the selected value.
+        2. Split the selected value at the '_' [0] being the type of sort and [1] being the direction.
+        3. Update the current url with the selected sort and direction perameters.
+        4. Reload the page to display the new results.
+        5. If 'reset' is true then delete the sort and direction perameters and reload the page
+        */
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+            var selectedVal = selector.val();
+
+            if(selectedVal != 'reset') {
+                var sort = selectedVal.split('_')[0];
+                var direction = selectedVal.split('_')[1];
+
+                currentUrl.searchParams.set('sort', sort);
+                currentUrl.searchParams.set('direction', direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete('sort');
+                currentUrl.searchParams.delete('direction');
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
+{% endblock %}
