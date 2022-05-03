@@ -92,3 +92,9 @@ Code from: https://www.codegrepper.com/code-examples/html/bootstrap+remove+blue+
     color: #fffeff;
     background-color: #054A91;
 }
+
+#sort-selector {
+    width: 65%;
+    border: 2px solid #51A3A3;
+    border-radius: 10px;
+}
