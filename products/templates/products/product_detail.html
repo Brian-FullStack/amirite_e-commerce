@@ -44,7 +44,7 @@
                 <div class="card-body">
                     <!-- <a href="#" class="card-link site-btn">Add <i class="fas fa-shopping-bag fa-lg"></i></a>
                     <a href="#" class="card-link site-btn">Learn More</a> -->
-                    <form action="" class="form" method="POST">
+                    <form action="{% url 'add_to_bag' product.id %}" class="form" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
