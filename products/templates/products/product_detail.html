@@ -42,11 +42,35 @@
                     {% endif %}
                 </ul>
                 <div class="card-body">
-                    <a href="#" class="card-link site-btn">Add <i class="fas fa-shopping-bag fa-lg"></i></a>
-                    <a href="#" class="card-link site-btn">Learn More</a>
+                    <!-- <a href="#" class="card-link site-btn">Add <i class="fas fa-shopping-bag fa-lg"></i></a>
+                    <a href="#" class="card-link site-btn">Learn More</a> -->
+                    <form action="" class="form" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <span>Quanty:</span>
+                                <div class="form-group w-50">
+                                    <div class="input-group">
+                                        <input type="number" class="form-control qty_input" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <a href="{% url 'products' %}" class="site-btn">
+                                    <span>
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span>Return to shop.</span>
+                                </a>
+                                <button type="submit" class="site-btn" vlaue="Add">Add <i class="fas fa-shopping-bag fa-lg"></i></button>
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+    
 </div>
 {% endblock %}
