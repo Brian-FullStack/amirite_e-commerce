@@ -14,29 +14,93 @@
 <div class="container">
     <div class="row">
         <div class="col">
-           <hr>
-           <h2 class="logo-font">Shopping Bag</h2>
-           <hr>
+            <hr>
+            <h2 class="logo-font text-center">Shopping Bag</h2>
+            <hr>
         </div>
     </div>
 
     <div class="row">
         <div class="col">
             {% if bag_items %}
-                <div class="table-responsive">
-                    {{ bag_items }}
-                </div>
+            <div class="table-responsive">
+                <table class="table table-borderless table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product Info</th>
+                            <th scope="col"></th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+                    {% for item in bag_items %}
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="img-fluid" src="{{ item.product.image.url }}">
+                            </td>
+                            <td>
+                                <p><strong>{{ item.product.name }}</strong></p>
+                                <p class="text-muted">SKU: {{ item.product.sku|upper }}</p>
+                            </td>
+                            <td>
+                                <p>€{{ item.product.price }}</p>
+                            </td>
+                            <td>
+                                <p>{{ item.quantity }}</p>
+                            </td>
+                            <td>
+                                <p>€{{ item.product.price }}</p>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        <tr>
+                            <td colspan="4" class="text-right">
+                                <p><strong>Bag Total: ${{ total|floatformat:2 }}</strong></p>
+                                <p>Delivery: ${{ delivery|floatformat:2 }}</p>
+                                <h5><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h5>
+                                {% if free_delivery_delta > 0 %}
+                                <p>
+                                    Get free delivery if you spend <strong>${{ free_delivery_delta }}</strong>
+                                </p>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-right">
+                                <a href="#" class="site-btn-teal">
+                                    <span>Checkout</span>
+                                    <span>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-right">
+                                <a href="{% url 'products' %}" class="site-btn">
+                                    <span>
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span>Return to shop.</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             {% else %}
-                <p class="lead">You have nothing in your bag.</p>
-                <a href="{% url 'products' %}" class="site-btn">
-                    <span>
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span>Return to shop.</span>
-                </a>
+            <p class="lead">You have nothing in your bag.</p>
+            <a href="{% url 'products' %}" class="site-btn">
+                <span>
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span>Return to shop.</span>
+            </a>
             {% endif %}
         </div>
     </div>
 </div>
-    
+
 {% endblock %}
