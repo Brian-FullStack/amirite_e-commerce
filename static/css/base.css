@@ -138,3 +138,22 @@ Code from: https://www.codegrepper.com/code-examples/html/bootstrap+remove+blue+
     color: #51A3A3;
     text-decoration: none;
 }
+
+.qty-group {
+    display: flex;
+    align-items: center;
+}
+
+.decrement-qty, .increment-qty {
+    background-color: #51A3A3;
+    color: #054A91;
+    margin: 3px;
+    width: 30px !important;
+    height: 30px !important;
+    border: 1px solid #51A3A3;
+    border-radius: 5px;
+}
+
+.qty_input {
+    border: none;
+}
