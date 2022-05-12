@@ -129,9 +129,10 @@ Code from: https://www.codegrepper.com/code-examples/html/bootstrap+remove+blue+
     background-color: #fffeff;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-link {
     cursor: pointer;
-    color: #fffeff;
 }
 
 .btt-link:hover {
