@@ -54,23 +54,23 @@
                             <td>
                                 <p>€{{ item.product.price }}</p>
                             </td>
-                            <td>
-                                <form action="#" class="form" method="POST"></form>
-                                    <div class="form-group w-50">
+                            <td class="qty-form">
+                                <form action="#" class="form" method="POST">
+                                    {% csrf_token %}
+                                    <div class="form-group">
                                         <div class="input-group qty-group">
                                             <div class="input-group-append">
                                                 <button class="increment-qty" data-item_id="{{ item.item_id }}"
                                                     id="increment-qty_{{ item.item_id }}">
                                                     <span>
-                                                        <i class="fas fa-plus"></i>
+                                                        <i class="fas fa-plus fa-sm"></i>
                                                     </span>
                                                 </button>
                                             </div>
 
-                                            <input type="number" class="form-control qty_input" name="quantity" value="1"
+                                            <input type="number" class="form-control qty_input w-50" name="quantity" value="1"
                                                 min="1" max="99" data-item_id="{{ item.item_id }}"
                                                 id="id_qty_{{ item.item_id }}">
-
 
                                             <div class="input-group-prepend">
                                                 <button class="decrement-qty" data-item_id="{{ item.item_id }}"
@@ -80,12 +80,14 @@
                                                     </span>
                                                 </button>
                                             </div>
+                                            {% if item.product.has_color %}
+                                                <input type="hidden" name="product_color" value="{{ item.color }}">
+                                            {% endif %}
                                         </div>
                                     </div>
                                     <a class="update-link"><small>Update</small></a>
                                     <a class="remove-link text-danger"
                                     id="remove_{{ item.item_id }}"><small>Remove</small></a>
-                            
                                 </form>
                             </td>
                             <td>

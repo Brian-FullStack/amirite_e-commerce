@@ -140,8 +140,13 @@ Code from: https://www.codegrepper.com/code-examples/html/bootstrap+remove+blue+
     text-decoration: none;
 }
 
+.qty-form {
+    width: auto;
+}
+
 .qty-group {
     display: flex;
+    flex-wrap: nowrap !important;
     align-items: center;
 }
 
