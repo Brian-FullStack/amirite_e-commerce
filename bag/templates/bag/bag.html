@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -52,10 +53,10 @@
                                 <p class="text-muted">SKU: {{ item.product.sku|upper }}</p>
                             </td>
                             <td>
-                                <p>€{{ item.product.price }}</p>
+                                <p>€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                             </td>
                             <td class="qty-form">
-                                <form action="#" class="form" method="POST">
+                                <form class="form update-form" method="POST" action="{% url 'update_bag' item.item_id %}">
                                     {% csrf_token %}
                                     <div class="form-group">
                                         <div class="input-group qty-group">
@@ -68,7 +69,7 @@
                                                 </button>
                                             </div>
 
-                                            <input type="number" class="form-control qty_input w-50" name="quantity" value="1"
+                                            <input type="number" class="form-control qty_input w-50" name="quantity" value="{{ item.quantity }}"
                                                 min="1" max="99" data-item_id="{{ item.item_id }}"
                                                 id="id_qty_{{ item.item_id }}">
 
@@ -87,17 +88,12 @@
                                     </div>
                                     <a class="update-link"><small>Update</small></a>
                                     <a class="remove-link text-danger"
-                                    id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                    id="remove_{{ item.item_id }}" data-product_color="{{ item.color }}"><small>Remove</small></a>
                                 </form>
                             </td>
                             <td>
                                 <p>€{{ item.product.price }}</p>
                             </td>
-                            <!-- <td>
-                                <a class="update-link"><small>Update</small></a>
-                                <a class="remove-link text-danger"
-                                    id="remove_{{ item.item_id }}"><small>Remove</small></a>
-                            </td> -->
                         </tr>
                         {% endfor %}
                         <tr>
@@ -154,26 +150,26 @@
 {% include 'products/includes/quantity_input_script.html' %}
 <script type="text/javascript">
     // Handle the Update link
-    $('.update-link').click(function (e) {
-        console.log('Update btn clicked')
+    $('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');
         form.submit();
-        console.log('Form submitted')
     })
 
     // Handle the Remove link
-    $('.remove-link').click(function (e) {
+    $('.remove-link').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}`;
+        var color = $(this).data('product_color');
+        var url = `/bag/remove/${itemId}/`;
         var data = {
-            'csrfmiddlewaretoken': csrfToken
+            'csrfmiddlewaretoken': csrfToken,
+            'product_color': color
         };
 
         $.post(url, data)
-            .done(function () {
-                location.reload();
-            });
+        .done(function () {
+            location.reload();
+        });
     })
 </script>
 {% endblock %}
