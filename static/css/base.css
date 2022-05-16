@@ -76,6 +76,8 @@ Code from: https://www.codegrepper.com/code-examples/html/bootstrap+remove+blue+
     align-items: flex-end;
 }
 
+/* Site Buttons*/
+
 .shop-now-btn {
     border: 3px solid #054A91;
     border-radius: 10px;
@@ -140,6 +142,8 @@ Code from: https://www.codegrepper.com/code-examples/html/bootstrap+remove+blue+
     text-decoration: none;
 }
 
+/* Quantity selector */
+
 .qty-form {
     width: auto;
 }
@@ -162,4 +166,21 @@ Code from: https://www.codegrepper.com/code-examples/html/bootstrap+remove+blue+
 
 .qty_input {
     border: none;
+}
+
+/* Toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
